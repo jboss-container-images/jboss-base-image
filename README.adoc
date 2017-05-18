@@ -1,0 +1,14 @@
+# JBoss Middleware base layer
+
+NOTE: Extends link:https://access.redhat.com/containers/#/registry.access.redhat.com/rhel7[RHEL base image]
+
+This is a very minimalistic layer containing changes that are applicable to all Middleware images. The purpose of this layer is to provide ground base and enforce common settings for all Middleware images. This includes:
+
+. Updates to the OS
+. Creation of the `jboss` user (and group) with uid/gid `185` used to start every Middleware product process
+. Setting working directory for the image: `/home/jboss`
+. Switching to the newly created `jboss` user
+
+# License
+
+See link:LICENSE[LICENSE] file.

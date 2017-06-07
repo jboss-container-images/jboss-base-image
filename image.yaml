@@ -1,16 +1,14 @@
 name: "jboss/base-rhel7"
 version: "1.0"
-release: "dev"
 from: "rhel7:7.3-released"
-description: "Base image for all other Middleware container images. The main goal of this image is to:\n\n. Install common set of tools, like unzip or tar,\n. Create a `jboss` user with group and user id `185` and home directory `/home/jboss`\n. Set the workdir to the jboss user home directory"
+description: "Base image for all other Middleware container images which provides common set of tools, jboss user and home directory"
 user: 185
-maintainer: "JBoss Cloud Enablement Feedback <cloud-enablement-feedback@redhat.com>"
+maintainer: "Cloud Enablement Feedback <cloud-enablement-feedback@redhat.com>"
 envs:
-    information:
-        - name: "HOME"
-          value: "/home/jboss"
-        - name: "JAVA_TOOL_OPTIONS"
-          value: "-Duser.home=/home/jboss -Duser.name=jboss"
+    - name: "HOME"
+      value: "/home/jboss"
+    - name: "JAVA_TOOL_OPTIONS"
+      value: "-Duser.home=/home/jboss -Duser.name=jboss"
 packages:
     - yum-utils
     - unzip
@@ -21,4 +19,4 @@ scripts:
       exec: add_jboss_user.sh
 workdir: "/home/jboss"
 dogen:
-    version: 2.0.0rc16
+    version: 2.0.0

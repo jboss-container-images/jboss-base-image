@@ -1,5 +1,5 @@
 name: "jboss/base-rhel7"
-version: "1.0"
+version: "1.1"
 from: "rhel7:7.3-released"
 description: "Base image for all other Middleware container images which provides common set of tools, jboss user and home directory"
 user: 185

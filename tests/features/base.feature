@@ -1,3 +1,4 @@
+@jboss/base-rhel7
 Feature: Standalone base image tests
 
   @ci

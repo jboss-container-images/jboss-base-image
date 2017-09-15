@@ -23,4 +23,4 @@ dogen:
     plugins:
         dist_git:
             repo: jboss-base-docker
-            branch: jb-rhel7-1.0
+            branch: jb-rhel7-1.1

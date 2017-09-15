@@ -19,7 +19,7 @@ scripts:
       exec: add_jboss_user.sh
 workdir: "/home/jboss"
 dogen:
-    version: 2.4.2
+    version: 2.4.3
     plugins:
         dist_git:
             repo: jboss-base-docker

@@ -1,6 +1,6 @@
 name: "jboss/base-rhel7"
 version: "1.0"
-from: "rhel7:7.4-81"
+from: "rhel7:7.4-released"
 description: "Base image for all other Middleware container images which provides common set of tools, jboss user and home directory"
 user: 185
 maintainer: "Cloud Enablement Feedback <cloud-enablement-feedback@redhat.com>"

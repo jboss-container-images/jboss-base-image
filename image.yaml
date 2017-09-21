@@ -7,8 +7,6 @@ maintainer: "Cloud Enablement Feedback <cloud-enablement-feedback@redhat.com>"
 envs:
     - name: "HOME"
       value: "/home/jboss"
-    - name: "JAVA_TOOL_OPTIONS"
-      value: "-Duser.home=/home/jboss -Duser.name=jboss"
 packages:
     - yum-utils
     - unzip

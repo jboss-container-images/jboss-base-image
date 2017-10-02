@@ -15,7 +15,7 @@ modules:
           - name: common
 packages:
       repositories:
-          - jboss
+          - jboss-os
       install:
           - yum-utils
           - unzip

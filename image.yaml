@@ -1,26 +1,32 @@
+schema_version: 1
+
 name: "jboss/base-rhel7"
 version: "1.0"
 from: "rhel7:7.4-released"
 description: "Base image for all other Middleware container images which provides common set of tools, jboss user and home directory"
-user: 185
-maintainer: "Cloud Enablement Feedback <cloud-enablement-feedback@redhat.com>"
+labels:
+    - name: maintainer
+      value: "Cloud Enablement Feedback <cloud-enablement-feedback@redhat.com>"
 envs:
     - name: "HOME"
       value: "/home/jboss"
     - name: "JAVA_TOOL_OPTIONS"
       value: "-Duser.home=/home/jboss -Duser.name=jboss"
+modules:
+      install:
+          - name: common
 packages:
-    - yum-utils
-    - unzip
-    - tar
-    - rsync
-scripts:
-    - package: common
-      exec: add_jboss_user.sh
-workdir: "/home/jboss"
-dogen:
-    version: 2.4.2
-    plugins:
-        dist_git:
-            repo: jboss-base-docker
+      repositories:
+          - jboss-os
+      install:
+          - yum-utils
+          - unzip
+          - tar
+          - rsync
+run:
+      user: 185
+      workdir: "/home/jboss"
+osbs:
+      repository:
+            name: jboss-base-docker
             branch: jb-rhel7-1.0

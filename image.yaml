@@ -23,7 +23,6 @@ packages:
           - unzip
           - tar
           - rsync
-          - nss
 run:
       user: 185
       workdir: "/home/jboss"

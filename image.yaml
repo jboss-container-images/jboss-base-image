@@ -27,4 +27,4 @@ run:
 osbs:
       repository:
             name: jboss-base-docker
-            branch: jb-rhel7-1.1
+            branch: jb-rhel7-1.2

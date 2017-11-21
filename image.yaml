@@ -11,6 +11,8 @@ envs:
     - name: "HOME"
       value: "/home/jboss"
 modules:
+      repositories:
+           - path: modules
       install:
           - name: common
 packages:

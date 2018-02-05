@@ -1,0 +1,8 @@
+schema_version: 1
+
+name: "jboss/base-centos7"
+from: "centos:7"
+modules:
+      repositories:
+           - name: release
+             path: modules/release/community

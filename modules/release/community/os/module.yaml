@@ -1,0 +1,7 @@
+schema_version: 1
+
+name: os
+
+packages:
+      install:
+          - centos-release-scl

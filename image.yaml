@@ -12,12 +12,14 @@ envs:
       value: "/home/jboss"
 modules:
       repositories:
-           - path: modules
+           - name: common
+             path: modules/common
+           - name: release
+             path: modules/release/product
       install:
           - name: common
+          - name: os
 packages:
-      repositories:
-          - jboss-os
       install:
           - yum-utils
           - unzip

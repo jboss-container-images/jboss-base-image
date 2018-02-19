@@ -5,6 +5,8 @@ version: "1.1"
 from: "rhel7:7.4-released"
 description: "Base image for all other Middleware container images which provides common set of tools, jboss user and home directory"
 labels:
+    - name: com.redhat.component
+      value: jboss-base-rhel7-container
     - name: maintainer
       value: "Cloud Enablement Feedback <cloud-enablement-feedback@redhat.com>"
 envs:
@@ -28,5 +30,5 @@ run:
       workdir: "/home/jboss"
 osbs:
       repository:
-            name: jboss-base-docker
-            branch: jb-rhel7-1.1
+            name: containers/jboss-base
+            branch: jb-rhel-7

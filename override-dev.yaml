@@ -1,0 +1,5 @@
+# Use the correct development branch
+osbs:
+  repository:
+    name: containers/jboss-base
+    branch: jb-dev-rhel-7

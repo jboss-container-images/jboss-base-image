@@ -19,7 +19,8 @@ modules:
           - name: common
 packages:
       repositories:
-          - jboss-os
+          - name: base
+            id: rhel-7-server-rpms
       install:
           - yum-utils
           - unzip
